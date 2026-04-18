@@ -11,7 +11,7 @@ import { CiLogin } from "react-icons/ci";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { useNavigate } from 'react-router-dom'
 
-import LogoutPopup from '../LogoutPopup' 
+import LogoutPopUp from '../LogoutPopUp' 
 
 const MenuLinks = [
     { id: 1, name: "Home", link: '/' },
@@ -95,7 +95,7 @@ const Navbar = () => {
 
                             {/*  DESKTOP LOGIN / LOGOUT */}
                             {islogin ? (
-                                <LogoutPopup
+                                <LogoutPopUp
                                     trigger={
                                         <button type="button"
                                             className="hidden cursor-pointer md:block relative overflow-hidden border border-blue-500 rounded-sm h-8 w-20 lg:w-24 text-blue-500 group hover:border-0">
@@ -124,7 +124,7 @@ const Navbar = () => {
 
                             {/*  MOBILE LOGIN / LOGOUT */}
                             {islogin ? (
-                                <LogoutPopup
+                                <LogoutPopUp
                                     trigger={
                                         <button className="block cursor-pointer md:hidden relative overflow-hidden rounded-sm lg:w-24 h-8 px-2 text-blue-500 group hover:border-0">
                                             <span className="absolute inset-0 bg-primary -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
