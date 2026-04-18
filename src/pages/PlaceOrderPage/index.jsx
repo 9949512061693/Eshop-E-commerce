@@ -138,9 +138,9 @@ function PlaceOrderPage() {
           className='h-[35px] border rounded'
           required
         >
-          <option value="">Select City</option>
+          <option value="" className='text-gray-500'>Select City</option>
           {indianCities.map((city, index) => (
-            <option key={index} value={city}>{city}</option>
+            <option key={index} value={city} className='text-gray-500'>{city}</option>
           ))}
         </select>
 
