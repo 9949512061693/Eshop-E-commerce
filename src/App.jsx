@@ -82,16 +82,20 @@ function App() {
 
     const savedCart = localStorage.getItem('cart')
 
-    const parsedCart = JSON.parse(savedCart);
+let parsedCart = []
 
-    const updatedCart = parsedCart.map(item => ({
-      ...item,
-      quantity: item.quantity || 1  
-    }));
+try {
+  parsedCart = savedCart ? JSON.parse(savedCart) : []
+} catch (e) {
+  parsedCart = []
+}
 
-    setCartProducts(updatedCart);
+const updatedCart = parsedCart.map(item => ({
+  ...item,
+  quantity: item.quantity || 1
+}))
 
-  }, []);
+setCartProducts(updatedCart)
 
   const deleteCartProduct = (productId) => {
   setCartProducts(prev => prev.filter(item => item.id !== productId));
