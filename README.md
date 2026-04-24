@@ -54,7 +54,7 @@ This project focuses on frontend architecture, UI/UX, and state management.
 
 - Order form with contact and delivery details
 - Displays complete order summary
-- Sends order confirmation using **EmailJS (no backend required)**
+- Sends order confirmation using
 
 ### 📦 Cart Management
 
